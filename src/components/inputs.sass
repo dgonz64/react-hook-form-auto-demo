@@ -1,0 +1,78 @@
+$height: 38px
+$select-padding: 6px
+$select-total-height: $height + $select-padding
+$error-color: #711
+
+.inputBlockWrap
+  display: flex
+  flex-flow: column nowrap
+  margin-bottom: 16px
+  .label
+    flex: 0 auto
+    margin-bottom: .25em
+.input
+  flex: 0 auto
+  border: 1px solid #a0a0a0
+  background-color: #ffffff
+  border-radius: 4px
+  padding: 0px 8px
+  font-size: 16px
+  &.standard
+    min-height: $height
+  &.errored
+    border: 1px solid $error-color
+.inlineWrap
+  .input
+    width: calc(100% - 20px)
+
+.itemHeader
+  display: inline-block
+
+.button
+  min-height: $height
+  height: $height
+  line-height: $height
+  padding: 0px 8px
+  border: 1px solid #b0b0b0
+  background-image: linear-gradient(#f0f0f0, #c0c0c0)
+  border-radius: 4px
+  margin: 0 4px
+  cursor: pointer
+
+.checkboxWrap
+  margin-bottom: 16px
+
+.radioGroupWrap
+  margin-bottom: 16px
+
+.checkboxLabel, .radioLabel
+  margin-left: 8px
+
+.inputPanelWrap
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+
+.error
+  position: relative
+  font-size: 12px
+  color: $error-color
+  padding: 4px
+  .errorIcon
+    width: calc(100% - 8px)
+    position: absolute
+    top: -26px 
+    text-align: right
+    color: $error-color
+    pointer-events: none
+
+.select
+  height: $select-total-height - $select-padding
+  padding: $select-padding
+  border: 1px solid #b0b0b0
+  background-image: linear-gradient(#ffffff, #f8f8f8, #e0e0e0)
+  border-radius: 4px
+
+.table
+  td
+    vertical-align: top
