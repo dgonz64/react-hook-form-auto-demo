@@ -20,6 +20,10 @@
   ],
   "author": "David González",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dgonz64/react-hook-form-auto-demo"
+  },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
