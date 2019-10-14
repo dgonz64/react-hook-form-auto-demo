@@ -18,8 +18,8 @@
     "form",
     "auto"
   ],
-  "author": "David González",
-  "license": "ISC",
+  "author": "David González <braben@gmail.com>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/dgonz64/react-hook-form-auto-demo"
@@ -70,7 +70,9 @@
     "react": "^16.9.0",
     "react-ace": "^5.9.0",
     "react-dom": "^16.9.0",
+    "react-hook-form": "^3.24.0",
     "react-hook-form-auto": "^1.0.0",
-    "react-notifications": "^1.4.3"
+    "react-notifications": "^1.4.3",
+    "rhfa-emergency-styles": "^1.0.0"
   }
 }

@@ -1,12 +1,11 @@
 import React, { forwardRef } from 'react'
 import { Autoform as RHFAutoform } from 'react-hook-form-auto'
 
-import panelStyles from './Panel.sass'
-import inputStyles from './inputs.sass'
+import styles from 'rhfa-emergency-styles/unprefixed.sass'
 
 export let Autoform = (props, ref) =>
   <RHFAutoform
-    styles={{ ...panelStyles, ...inputStyles }}
+    styles={styles}
     {...props}
     ref={ref}
   />

@@ -9,7 +9,7 @@ import {
 import { NotificationManager } from 'react-notifications'
 
 import { Autoform } from './Autoform'
-import styles from './inputs.sass'
+import styles from 'rhfa-emergency-styles/unprefixed.sass'
 
 addTranslations({
   models: {
