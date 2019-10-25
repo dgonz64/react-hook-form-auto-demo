@@ -7,12 +7,8 @@ export const change = (code) => ({
   code
 })
 
-export const fix = () => ({
-  type: FIX
-})
-
-export const changeConfig = (config) => ({
-  type: CHANGE_CONFIG,
+export const fix = (config) => ({
+  type: FIX,
   config
 })
 
@@ -70,13 +66,10 @@ export const reducer = (state = initial, action) => {
     return Object.assign(
       {},
       state,
-      { code: state.edit }
-    )
-  case CHANGE_CONFIG:
-    return Object.assign(
-      {},
-      state,
-      { config: action.config }
+      {
+        code: state.edit,
+        config: action.config
+      }
     )
   default:
     return state
@@ -88,11 +81,8 @@ export const mapActions = dispatch => {
     changeCode: code => {
       dispatch(change(code))
     },
-    fix: () => {
-      dispatch(fix())
-    },
-    changeConfig: config => {
-      dispatch(changeConfig(config))
+    fix: (config) => {
+      dispatch(fix(config))
     }
   }
 }

@@ -23,12 +23,6 @@ const handleChange = (changeCode, code) => {
   changeCode(code)
 }
 
-const handleConfigChange = (curConfig, changeConfig, config) => {
-  if (config && curConfig.arrayMode != config.arrayMode) {
-    changeConfig(config)
-  }
-}
-
 export const App = () => {
   const sampleEl = useRef(null)
 
@@ -51,13 +45,16 @@ export const App = () => {
   })
 
   const updateRender = () => {
-    actions.fix()
+  }
+
+  const handleSubmit = (config) => {
+    actions.fix(config)
   }
 
   return (
     <div className={styles.appWrap}>
       <h3 className={styles.demoTitle}>
-        <a href="https://github.com/dgonz64/redux-form-auto">
+        <a href="https://github.com/dgonz64/react-hook-form-auto">
           react-hook-form-auto demo
         </a>
       </h3>
@@ -81,19 +78,21 @@ export const App = () => {
                 React-Ace
               </a>
             </small></p>
-            <div className={styles.renderButton}>
-              <Button onClick={updateRender}>
-                Update
-              </Button>
-            </div>
+            <Panel header="Form parameters">
+              <DemoConfig
+                onSubmit={handleSubmit}
+                config={config}
+              >
+                <div className={styles.renderButton}>
+                  <Button type="submit">
+                    Update
+                  </Button>
+                </div>
+              </DemoConfig>
+            </Panel>
           </Panel>
         </div>
         <div className={styles.results}>
-          <Panel header="Form parameters">
-            <DemoConfig
-              onChange={handleConfigChange.bind(null, config, actions.changeConfig)}
-            />
-          </Panel>
           <Panel header="Form element" noMargin>
             <AceEditor
               mode="jsx"

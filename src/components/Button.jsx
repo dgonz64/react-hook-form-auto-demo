@@ -6,14 +6,14 @@ export const Button = ({
   children,
   onClick
 }) => {
-  const defaulted = e => {
+  const defaulted = onClick ? e => {
     e.preventDefault()
     onClick()
-  }
+  } : null
 
   return (
-    <a href="#" onClick={defaulted} className={styles.button}>
+    <button href="#" onClick={defaulted} className={styles.button}>
       {children}
-    </a>
+    </button>
   )
 }

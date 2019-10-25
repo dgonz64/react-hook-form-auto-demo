@@ -3,7 +3,8 @@ import React from 'react'
 import {
   createSchema,
   addTranslations,
-  setLanguageByName
+  setLanguageByName,
+  FieldPropsOverride
 } from 'react-hook-form-auto'
 
 import { Autoform } from './Autoform'
@@ -28,11 +29,17 @@ const configSchema = createSchema('config', {
 })
 
 export const DemoConfig = ({
-  onChange,
-  config
+  onSubmit,
+  config,
+
+  // Passing children to sneak a submit button
+  children
 }) =>
   <Autoform
     schema={configSchema}
-    onChange={onChange}
+    onSubmit={onSubmit}
     config={config}
-  />
+    initialValues={config}
+  >
+    {children}
+  </Autoform>
