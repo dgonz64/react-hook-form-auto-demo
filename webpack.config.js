@@ -85,7 +85,6 @@ const productionConfig = merge([
   parts.extractCSS({
     rules: [{
       test: /\.sass$/,
-      exclude: /node_modules/,
       use: [
         parts.extractLoader,
         parts.cssModulesUse({ mode: 'production' }),
@@ -138,7 +137,6 @@ const developmentConfig = merge([
   parts.loadCSS({
     rules: [{
       test: /\.sass$/,
-      exclude: /node_modules/,
       use: [
         'style-loader',
         parts.cssModulesUse({
