@@ -55,8 +55,9 @@ exports.cssModulesUse = ({
 }) => cssLoaderBase({
   cssLoader,
   options: {
-    localIdentName: '[name]__[local]--[hash:base64:5]',
-    modules: true
+    modules: {
+      localIdentName: '[name]__[local]--[hash:base64:5]',
+    }
   },
 })
 
