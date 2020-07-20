@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useReducer } from 'react'
-import brace from 'brace'
 import AceEditor from 'react-ace'
 import { NotificationContainer } from 'react-notifications'
 
-import 'brace/mode/javascript'
-import 'brace/mode/jsx'
-import 'brace/theme/github'
+import 'ace-builds/src-noconflict/mode-javascript'
+import 'ace-builds/src-noconflict/mode-jsx'
+import 'ace-builds/src-noconflict/theme-github'
 
 import { editing } from '../ducks'
 
