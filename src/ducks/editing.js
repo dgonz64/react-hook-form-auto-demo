@@ -17,7 +17,8 @@ const initialCode =
   name: {
     type: String,
     required: true,
-    maxLength: 8
+    maxLength: 8,
+    helperText: 'Should be short'
   },
   heads: {
     type: Number
